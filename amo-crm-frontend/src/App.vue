@@ -1,9 +1,19 @@
 <template>
     <div id="app">
-        <section class="transactions">
-            <a-card class="transactions__card" title="Тестовое задание" :bordered="false">
-                <template v-slot:extra>
-                    <a-space direction="vertical">
+        <section
+            class="transactions"
+        >
+            <a-card
+                class="transactions__card"
+                title="Тестовое задание"
+                :bordered="false"
+            >
+                <template
+                    v-slot:extra
+                >
+                    <a-space
+                        direction="vertical"
+                    >
                         <a-input-search
                             v-model:value="searchQuery"
                             placeholder="Найти..."
@@ -23,7 +33,9 @@
                         <template
                             v-slot:bodyCell="{ column, record }"
                         >
-                            <template v-if="column.key === 'name'">
+                            <template
+                                v-if="column.key === 'name'"
+                            >
                                 {{ record.name }}
                             </template>
                             <template
